@@ -1,29 +1,24 @@
 public class Main {
 
     public static void main(String[] args) {
-        Punkt p1 = new Punkt();
-        Punkt p2 = new Punkt(100);
+        Walec w1 = new Walec(10, 3 , 15);
+        Kula k1 = new Kula(12, 30);
+        Pret p1 = new Pret(7, 10);
+        w1.opis();
+        k1.opis();
         p1.opis();
-        System.out.println("Masa: " + p1.getMasa());
-        System.out.println("Moment Glowny: " + p1.momBez());
-        System.out.println("Moment z tw.Steinera(przesuniecie o 4 jednostki): " + p1.momBezSt(4) + "\n");
-        p2.opis();
-        System.out.println("Masa: " + p2.getMasa());
-        System.out.println("Moment Glowny: " + p2.momBez());
-        System.out.println("Moment z tw.Steinera(przesuniecie o 4 jednostki): " + p2.momBezSt(4) + "\n");
-        p1.setMasa(20);
-        p1.opis();
-        System.out.println("Masa: " + p1.getMasa());
-        System.out.println("Moment Glowny: " + p1.momBez());
-        System.out.println("Moment z tw.Steinera(przesuniecie o 4 jednostki): " + p1.momBezSt(4) + "\n");
-        Punkt tab[] = new Punkt[4];
-        System.out.printf("PETLE: \n\n");
-        for(int i =0; i < 4;i++)
+        Punkt tab[] = new Punkt[9];
+        System.out.println("\nPETLE:\n");
+        for(int i = 0; i <9 ; i = i+3)
         {
-            tab[i] = new Punkt((i+1)*10);
-            System.out.println("Masa: " + tab[i].getMasa());
-            System.out.println("Moment Glowny: " + tab[i].momBez());
-            System.out.println("Moment z tw.Steinera(przesuniecie o 6 jednostek): " + tab[i].momBezSt(6) + "\n");
+            tab[i] = new Walec((i+1)*2 ,(i+1)+5 , (i+1)*10);
+            tab[i+1] = new Kula((i+1)+10 , (i+1)*2);
+            tab[i+2] = new Pret((i+1)*3,(i+1)+2);
+        }
+        for(int i = 0; i <9 ; i++)
+        {
+            tab[i].opis();
+            System.out.println("Moment bezwladnosci przesuniety o 4 jednostki: " + tab[i].momBezSt(4) + "\n");
         }
     }
 }

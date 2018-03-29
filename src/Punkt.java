@@ -11,20 +11,21 @@ public class Punkt {
         setMasa(masa);
     }
     //METHODS
-    public int momBez()
+    public double momBez()
     {
         int i = 0;
         return i;
 
     }
-    public int momBezSt(int x)
+    public double momBezSt(int x)
     {
-        return momBez() + getMasa()*x*x;
+        return  this.momBez() + this.getMasa()*x*x;
 
     }
     public void opis()
     {
         System.out.println("Punkt Materialny");
+        System.out.println("masa: " + this.getMasa());
     }
 
     //ACCESSORS
