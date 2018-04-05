@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class GUI   {
+public  class GUI   {
     //CONSTRUCTORS
     public GUI()
     {
@@ -31,7 +31,7 @@ public class GUI   {
                 int tmp4 = inputValue();
                 Walec walec = new Walec(tmp2,tmp3,tmp1);
                 walec.opis();
-                System.out.println("Moment przesuniety o " + tmp4 +" jednostek: " + walec.momBezSt(tmp4));
+                System.out.println("moment przesuniety o " + tmp4 +" jednostek: " + walec.momBezSt(tmp4));
                 System.out.println();
                 break;
             case 2:
@@ -43,7 +43,7 @@ public class GUI   {
                 tmp3 = inputValue();
                 Kula kula = new Kula(tmp1,tmp2);
                 kula.opis();
-                System.out.println("Moment przesuniety o " + tmp3 +" jednostek: " + kula.momBezSt(tmp3));
+                System.out.println("moment przesuniety o " + tmp3 +" jednostek: " + kula.momBezSt(tmp3));
                 System.out.println();
                 break;
             case 3:
@@ -55,7 +55,7 @@ public class GUI   {
                 tmp3 = inputValue();
                 Pret pret = new Pret(tmp1,tmp2);
                 pret.opis();
-                System.out.println("Moment przesuniety o " + tmp3 +" jednostek: " + pret.momBezSt(tmp3));
+                System.out.println("moment przesuniety o " + tmp3 +" jednostek: " + pret.momBezSt(tmp3));
                 System.out.println();
                 break;
             case 0 :
@@ -72,7 +72,6 @@ public class GUI   {
             try {
                 tmp = input.read();
                 if ((tmp-48 >= 0) && (tmp-48 <= 3)) {
-                    input.skip(1);
                     return tmp - 48;
 
                 } else {
@@ -115,6 +114,7 @@ public class GUI   {
                 System.out.println("Zly format danych");
                 System.out.println(e.getLocalizedMessage());
                 System.out.println("podaj poprawna wartosc: ");
+                continue;
 
             }
 
