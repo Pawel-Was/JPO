@@ -1,6 +1,7 @@
 public class Pret extends Punkt {
     //VARIABLES
     private int length;
+    private final static String nazwa = "Walec";
     //CONSTRUCTORS
     public Pret()
     {
@@ -19,10 +20,11 @@ public class Pret extends Punkt {
     }
     @Override
     public void opis() {
-        System.out.println("Pret");
+        System.out.println(this.getNazwa());
         System.out.println("masa: " + this.getMasa());
         System.out.println("dlugosc: " + this.getLength());
         System.out.println("moment bezwladnosci: " + this.momBez());
+        System.out.println();
     }
     //ACCESSORS
     public int getLength()
@@ -42,6 +44,10 @@ public class Pret extends Punkt {
             this.length=1;
 
         }
+    }
+    public String getNazwa()
+    {
+        return this.nazwa;
     }
 
 }

@@ -1,6 +1,7 @@
 public class Kula extends Punkt {
     //VARIABLES
     private int radius;
+    private final static String nazwa = "Kula";
     //CONSTRUCTORS
     public Kula()
     {
@@ -24,10 +25,11 @@ public class Kula extends Punkt {
 
     @Override
     public void opis() {
-        System.out.println("Kula");
+        System.out.println(this.getNazwa());
         System.out.println("masa: " + this.getMasa());
         System.out.println("promien: " + this.getRadius());
         System.out.println("moment bezwladnosci: " + this.momBez());
+        System.out.println();
     }
 
     //ACCESSORS
@@ -47,6 +49,10 @@ public class Kula extends Punkt {
             this.radius = 1;
 
         }
+    }
+    public String getNazwa()
+    {
+        return this.nazwa;
     }
 
 }

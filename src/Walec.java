@@ -1,7 +1,8 @@
 public class Walec extends Punkt {
     //VARIABLES
     private int height; //wysokość walca (W SUMIE TO NIEPOTRZEBNE ALE DOBRZE,ŻE JEST)
-    private int radius; //promień
+    private int radius; //promień\
+    private final static String nazwa = "Walec";
     //CONSTRUCTORS
     public Walec()
     {
@@ -24,7 +25,7 @@ public class Walec extends Punkt {
 
     @Override
     public void opis() {
-        System.out.println("Walec");
+        System.out.println(this.getNazwa());
         System.out.println("masa: " + this.getMasa());
         System.out.println("wysokosc: " + this.getHeight());
         System.out.println("promien: " + this.getRadius());
@@ -67,5 +68,9 @@ public class Walec extends Punkt {
             this.radius = 1;
 
         }
+    }
+    public String getNazwa()
+    {
+        return this.nazwa;
     }
 }
